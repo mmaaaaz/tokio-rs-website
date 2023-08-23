@@ -1,5 +1,5 @@
 import { Fragment, useCallback, useState } from "react";
-import classnames from "classnames";
+import clsx from "clsx";
 import Link from "next/link";
 
 const monthNames = [
@@ -36,7 +36,7 @@ export default function Menu({ href, menu, children }) {
   return (
     <aside className="menu">
       <div
-        className={classnames("tk-toc is-hidden-tablet", {
+        className={clsx("tk-toc is-hidden-tablet", {
           "is-active": expanded,
         })}
       >
@@ -48,7 +48,7 @@ export default function Menu({ href, menu, children }) {
         </a>
       </div>
 
-      <div className={classnames("tk-menu-body", { "is-active": expanded })}>
+      <div className={clsx("tk-menu-body", { "is-active": expanded })}>
         {groups}
 
         {/* TODO: hook this up, only when needed */}

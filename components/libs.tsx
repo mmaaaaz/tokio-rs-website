@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from "react";
-import classnames from "classnames";
+import clsx from "clsx";
 
 type Library = {
   id: string;
@@ -38,7 +38,7 @@ const LIBS: Library[] = [
 
 const Lib: FC<{ lib: Library }> = ({ lib }) => (
   <div
-    className={classnames(
+    className={clsx(
       "column",
       "is-half",
       "is-flex",

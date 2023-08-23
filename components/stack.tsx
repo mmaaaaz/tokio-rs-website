@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from "react";
-import classnames from "classnames";
+import clsx from "clsx";
 
 type StackLayer = {
   id: string;
@@ -89,7 +89,7 @@ const Layer: FC<{ layer: StackLayer }> = ({ layer }) => (
   <div className="card">
     <div
       id={"tk-lib-stack-" + layer.id}
-      className={classnames("card-content", `tk-lib-${layer.id}`)}
+      className={clsx("card-content", `tk-lib-${layer.id}`)}
     >
       <div className="media">
         <div className="media-content">

@@ -1,5 +1,5 @@
 import React, { FC, useCallback, useState } from "react";
-import classnames from "classnames";
+import clsx from "clsx";
 import SocialLinks from "./social-links";
 
 // TODO: what is this thing??
@@ -48,7 +48,7 @@ const Navigation: FC<{ blog: Blog }> = ({ blog }) => {
           <Brand />
           <a
             role="button"
-            className={classnames("navbar-burger", {
+            className={clsx("navbar-burger", {
               "is-active": expanded,
             })}
             aria-label="menu"
@@ -61,7 +61,7 @@ const Navigation: FC<{ blog: Blog }> = ({ blog }) => {
           </a>
         </div>
         <div
-          className={classnames("navbar-menu", {
+          className={clsx("navbar-menu", {
             "is-active": expanded,
           })}
         >
