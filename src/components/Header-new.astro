@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content'
+
+// get only the latest blog post
+const recentPost = (await getCollection('blog')).slice(0, 1)[0]
+---
+
+<header class="h-20 flex items-center justify-center bg-black">
+ <div class="max-w-[1150px] mx-auto flex items-center justify-between">
+   <!-- Logo -->
+  <a
+    href="/"
+    class=""
+  >
+    <img
+      src="/img/tokio-horizontal.svg"
+      alt="tokio-logo"
+      width="133"
+      height="56"
+    />
+  </a>
+
+  <!-- Navigation -->
+  <div class="flex items-center justify-between">
+    <!-- links -->
+    <nav>
+      {[['Learn', '/tokio/tutorial'], ['API Docs', 'https://docs.rs/tokio'], ['Blog', recentPost.slug]].map(([text, link]) => (
+        <a
+          href={link}
+          class="text-white text-sm font-medium hover:text-gray-300"
+        >
+          {text}
+        </a>
+      ))
+    </nav>
+
+    <!-- Social -->
+    <div></div>
+  </div>
+ </div>
+</header>

@@ -1,70 +1,68 @@
-# Tokio Website
+# Astro Starter Kit: Blog
 
-The website for the Tokio project. Lives at https://tokio.rs.
-
-Besides containing the content for the website, it also includes crates
-containing the example code used in the tutorial. These crates can be compiled
-and ran.
-
-* [hello-tokio](tutorial-code/hello-tokio/src/main.rs)
-* [spawning](tutorial-code/spawning/src/main.rs)
-* [shared-state](tutorial-code/shared-state/src/main.rs)
-* [channels](tutorial-code/channels/src/main.rs)
-* [io](tutorial-code/io)
-    * [echo-server-copy](tutorial-code/io/src/echo-server-copy.rs)
-    * [echo-server](tutorial-code/io/src/echo-server.rs)
-* [mini-tokio](tutorial-code/mini-tokio/src/main.rs)
-
-## Contributing
-
-Thinking about contributing? Great! This should help you get the website running
-locally.
-
-### Getting Started
-
-The website is built using [Next.js] paired with the [Bulma] CSS framework.
-You'll need NPM to install the required packages with:
-
-```bash
-npm install
+```
+npm create astro@latest -- --template blog
 ```
 
-Next, start the development server:
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
 
-```bash
-npm run dev
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+
+![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+
+Features:
+
+- ✅ Minimal styling (make it your own!)
+- ✅ 100/100 Lighthouse performance
+- ✅ SEO-friendly with canonical URLs and OpenGraph data
+- ✅ Sitemap support
+- ✅ RSS Feed support
+- ✅ Markdown & MDX support
+
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```
+├── public/
+├── src/
+│   ├── components/
+│   ├── content/
+│   ├── layouts/
+│   └── pages/
+├── astro.config.mjs
+├── README.md
+├── package.json
+└── tsconfig.json
 ```
 
-Then, open [http://localhost:3000](http://localhost:3000).
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-[Next.js]: https://nextjs.org/
-[Bulma]: https://bulma.io/
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-### Resources
+The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
 
-To learn more about Next.js, take a look at the following resources:
+Any static assets, like images, can be placed in the `public/` directory.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Bulma documentation](https://bulma.io/documentation/) - learn about Bulma.
+## 🧞 Commands
 
-## License
+All commands are run from the root of the project, from a terminal:
 
-This project is licensed under the [MIT license](LICENSE).
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:3000`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-### Contribution
+## 👀 Want to learn more?
 
-Unless you explicitly state otherwise, any contribution intentionally submitted
-for inclusion in Tokio by you, shall be licensed as MIT, without any additional
-terms or conditions.
+Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
-You can run our tests by running the commands:
-```
-# in doc-test (unstable APIs are needed by some tests)
-RUSTFLAGS="--cfg tokio_unstable" cargo +nightly test
+## Credit
 
-# in tutorial-code
-cargo test --all
-```
-The doc tests verify that all code blocks are valid Rust, and the tutorial-code folder
-contains the full code examples from the tutorial.
+This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
